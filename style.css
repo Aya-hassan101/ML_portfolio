@@ -1,40 +1,118 @@
-.projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
+/* Projects Section */
+.projects-section {
+  padding: 80px 10%;
+  background: #0f172a;
+  color: white;
+  text-align: center;
 }
 
+.section-title {
+  font-size: 42px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.section-subtitle {
+  font-size: 18px;
+  color: #94a3b8;
+  margin-bottom: 50px;
+}
+
+/* Grid Layout */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+/* Card Style */
 .project-card {
   background: #1e293b;
-  padding: 15px;
-  border-radius: 12px;
-  transition: 0.3s;
-  text-align: center;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  transition: 0.4s ease;
 }
 
 .project-card:hover {
   transform: translateY(-10px);
 }
 
+/* Image */
 .project-card img {
   width: 100%;
-  border-radius: 10px;
+  height: 220px;
+  object-fit: cover;
 }
 
+/* Content */
+.project-content {
+  padding: 25px;
+}
+
+.project-content h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.project-content p {
+  font-size: 16px;
+  color: #cbd5e1;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+/* Buttons */
 .buttons {
   display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
+  justify-content: center;
+  gap: 15px;
 }
 
 .buttons a {
-  flex: 1;
-  margin: 5px;
-  padding: 8px;
-  background: #3b82f6;
-  color: white;
+  padding: 10px 22px;
+  border-radius: 10px;
   text-decoration: none;
-  border-radius: 6px;
-  text-align: center;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+/* GitHub Button */
+.buttons a:first-child {
+  background: #38bdf8;
+  color: white;
+}
+
+.buttons a:first-child:hover {
+  background: #0ea5e9;
+}
+
+/* Demo Button */
+.buttons a:last-child {
+  border: 2px solid #38bdf8;
+  color: #38bdf8;
+}
+
+.buttons a:last-child:hover {
+  background: #38bdf8;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 32px;
+  }
+
+  .projects-section {
+    padding: 60px 5%;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .buttons a {
+    width: 100%;
+  }
 }
